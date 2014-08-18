@@ -4,6 +4,8 @@ In high-level languages such as Ruby and JavaScript, we don't have to think abou
 
 Since Ruby and JavaScript are the two languages you know best right now, we will be implementing some low-level data structures and algorithms in these languages, even though **normally there would be no practical reason to do this.** It's important to understand that we are re-inventing the wheel to an extreme degree here.
 
+(instructor note: examples branch incomplete, [see old repo](https://github.com/ga-wdi-boston/wdi_11_cs_topics_old) for additional code)
+
 ## Linked Lists
 
 Low-level arrays (as implemented in C or C++) are contiguous blocks of memory made up of many "cells", each of which contains a value. The one-block-of-memory approach makes accessing arbitrary values fast and easy, but it means that you have to know in advance how many array elements you want. Expanding arrays is an expensive operation that involves reserving a new block of memory and copying all the existing elements into it.
@@ -18,7 +20,7 @@ Implement a `LinkedList` class in Ruby or JavaScript. **Do not use arrays or has
 * Prepend a new value to the beginning of the list
 * Find whether a given value is in the list
 * Insert a new value after a given value in the list
-* Remove a given value from the list
+* Remove a given value from the list (warning: tricky!)
 * Find the length of the list
 * Implement `to_s` or `toString` to return all values in the list
 
@@ -34,7 +36,7 @@ These can be attempted in any order &ndash; they are not dependent on each other
 
 * Create a method that reverses the list. It can either return a new reversed list and leave the existing one alone, or reverse the existing list in-place. Or try doing both!
 
-* Upgrade your linked list to a **doubly-linked list**. In this variant of the linked list, each element holds references to both the "next" element and the "previous" element.
+* Upgrade your linked list to a **doubly-linked list**. In this variant of the linked list, each element holds references to both the "next" element and the "previous" element. You may find that it's much easier to remove a specific value from this kind of list.
 
 * Done-to-death interview question: Suppose you have a linked list that has been "corrupted" such that the links form a loop &ndash; if you tried to iterate through it, you'd keep going forever. Devise an algorithm that, given the first element of a linked list, would detect whether the list contains a loop.
 
@@ -66,7 +68,7 @@ Implement a `BinaryTree` class in Ruby or JavaScript. As before, do not use any 
 
 * Add a new value to the tree
 * Find whether a given value is in the tree
-* Remove a given value from the tree
+* Remove a given value from the tree (warning: tricky!)
 * Implement `to_s` or `toString` to return all values in the tree
 
 Question: What is the big-O time of these methods? How do they compare to the equivalent operations on an array or linked list?
